@@ -356,7 +356,7 @@ export function Settings(props: { closeSettings: () => void }) {
             >
               <PasswordInput
                 value={accessStore.accessCode}
-                type="text"
+                type=""
                 placeholder={Locale.Settings.AccessCode.Placeholder}
                 onChange={(e) => {
                   accessStore.updateCode(e.currentTarget.value);
@@ -373,7 +373,7 @@ export function Settings(props: { closeSettings: () => void }) {
           >
             <PasswordInput
               value={accessStore.token}
-              type=""
+              type="text"
               placeholder={Locale.Settings.Token.Placeholder}
               onChange={(e) => {
                 accessStore.updateToken(e.currentTarget.value);
