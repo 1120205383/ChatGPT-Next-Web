@@ -206,8 +206,7 @@ export function Settings(props: { closeSettings: () => void }) {
             
            
             
-          const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-const [showEmojiInput, setShowEmojiInput] = useState(true); // 默认显示 EmojiPicker 的搜索框
+ 
 
 // 如果不需要显示 EmojiPicker 的搜索框，将 showEmojiInput 设为 false
 // setShowEmojiInput(false);
