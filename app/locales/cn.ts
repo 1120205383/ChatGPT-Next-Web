@@ -115,7 +115,7 @@ const cn = {
       Token: {
       Title: "API Key",
       SubTitle: "使用自己的 Key 可绕过密码访问限制",
-     // Placeholder: "OpenAI API Key",
+     Placeholder: "OpenAI API Key",
     },
    Usage: {
       Title: "余额查询",
