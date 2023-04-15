@@ -125,11 +125,6 @@ const cn = {
       IsChecking: "正在检查…",
       Check: "重新检查",
       NoAccess: "输入 API Key 或访问密码查看余额",
-     #password-input {
-  display: none; // 隐藏输入框
-  disabled: true; // 禁用输入框
-}
-
     },
     AccessCode: {
       Title: "访问密码",
