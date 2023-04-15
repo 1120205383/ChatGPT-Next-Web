@@ -203,28 +203,35 @@ export function Settings(props: { closeSettings: () => void }) {
       <div className={styles["settings"]}>
         <List>
           <SettingItem title={Locale.Settings.Avatar}>
-            <Popover
-              onClose={() => setShowEmojiPicker(false)}
-              content={
-                <EmojiPicker
-                  lazyLoadEmojis
-                  theme={EmojiTheme.AUTO}
-                  getEmojiUrl={getEmojiUrl}
-                  onEmojiClick={(e) => {
-                    updateConfig((config) => (config.avatar = e.unified));
-                    setShowEmojiPicker(false);
-                  }}
-                />
-              }
-              open={showEmojiPicker}
-            >
-              <div
-                className={styles.avatar}
-                onClick={() => setShowEmojiPicker(true)}
-              >
-                <Avatar role="user" />
-              </div>
-            </Popover>
+            
+            
+           <Popover
+  onClose={() => setShowEmojiPicker(false)}
+  content={
+    {showEmojiInput && (
+      <EmojiPicker
+        lazyLoadEmojis
+        theme={EmojiTheme.AUTO}
+        getEmojiUrl={getEmojiUrl}
+        onEmojiClick={(e) => {
+          updateConfig((config) => (config.avatar = e.unified));
+          setShowEmojiPicker(false);
+        }}
+      />
+    )}
+  }
+  open={showEmojiPicker}
+>
+  <div
+    className={styles.avatar}
+    onClick={() => setShowEmojiPicker(true)}
+  >
+    <Avatar role="user" />
+  </div>
+</Popover>
+
+            
+            
           </SettingItem>
 
           <SettingItem
