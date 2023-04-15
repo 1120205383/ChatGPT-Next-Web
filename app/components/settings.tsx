@@ -212,7 +212,6 @@ const [showEmojiInput, setShowEmojiInput] = useState(true); // 默认显示 Emoj
 // 如果不需要显示 EmojiPicker 的搜索框，将 showEmojiInput 设为 false
 // setShowEmojiInput(false);
 
-return (
   <Popover
     onClose={() => setShowEmojiPicker(false)}
     content={
@@ -235,7 +234,7 @@ return (
       <Avatar role="user" />
     </div>
   </Popover>
-);
+
 
             
             
