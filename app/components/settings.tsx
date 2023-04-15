@@ -204,31 +204,38 @@ export function Settings(props: { closeSettings: () => void }) {
         <List>
           <SettingItem title={Locale.Settings.Avatar}>
             
+           
             
-           <Popover
-  onClose={() => setShowEmojiPicker(false)}
-  content={
-    {showEmojiInput && (
+          const [showEmojiPicker, setShowEmojiPicker] = useState(false);
+const [showEmojiInput, setShowEmojiInput] = useState(true); // 默认显示 EmojiPicker 的搜索框
+
+// 如果不需要显示 EmojiPicker 的搜索框，将 showEmojiInput 设为 false
+// setShowEmojiInput(false);
+
+return (
+  <Popover
+    onClose={() => setShowEmojiPicker(false)}
+    content={
       <EmojiPicker
-        lazyLoadEmojis
         theme={EmojiTheme.AUTO}
         getEmojiUrl={getEmojiUrl}
         onEmojiClick={(e) => {
           updateConfig((config) => (config.avatar = e.unified));
           setShowEmojiPicker(false);
         }}
+        search={showEmojiInput} // 根据 showEmojiInput 的值来控制是否渲染搜索框
       />
-    )}
-  }
-  open={showEmojiPicker}
->
-  <div
-    className={styles.avatar}
-    onClick={() => setShowEmojiPicker(true)}
+    }
+    open={showEmojiPicker}
   >
-    <Avatar role="user" />
-  </div>
-</Popover>
+    <div
+      className={styles.avatar}
+      onClick={() => setShowEmojiPicker(true)}
+    >
+      <Avatar role="user" />
+    </div>
+  </Popover>
+);
 
             
             
