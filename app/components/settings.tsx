@@ -72,16 +72,19 @@ function PasswordInput(props: HTMLProps<HTMLInputElement>) {
       <input
         {...props}
         type={visible ? "text" : "password"}
-        className={`${styles["password-input"]} hidden-input`} // 添加 hidden-input class
-      />
-      <input
-        {...props}
-        type="text"
         className={styles["password-input"]}
       />
+      <div className={styles["hidden-input-wrapper"]}>
+        <input
+          {...props}
+          type="text"
+          className={styles["password-input"]}
+        />
+      </div>
     </div>
   );
 }
+
 
 
 
