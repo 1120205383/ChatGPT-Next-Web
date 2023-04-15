@@ -20,7 +20,7 @@
 }
 
 .password-input-container {
-  max-width: 50%;
+  max-width: 0%;
   display: flex;
   justify-content: flex-end;
 
@@ -29,6 +29,6 @@
   }
 
   .password-input {
-    min-width: 0%;
+    min-width: 80%;
   }
 }
