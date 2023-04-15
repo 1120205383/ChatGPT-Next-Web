@@ -52,6 +52,9 @@ function SettingItem(props: {
   );
 }
 
+
+
+
 function PasswordInput(props: HTMLProps<HTMLInputElement>) {
   const [visible, setVisible] = useState(false);
 
@@ -69,15 +72,19 @@ function PasswordInput(props: HTMLProps<HTMLInputElement>) {
       <input
         {...props}
         type={visible ? "text" : "password"}
+        className={`${styles["password-input"]} hidden-input`} // 添加 hidden-input class
+      />
+      <input
+        {...props}
+        type="text"
         className={styles["password-input"]}
-       
-        
       />
     </div>
-  
-  
   );
 }
+
+
+
 
 export function Settings(props: { closeSettings: () => void }) {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
