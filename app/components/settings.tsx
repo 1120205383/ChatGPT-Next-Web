@@ -70,7 +70,7 @@ function PasswordInput(props: HTMLProps<HTMLInputElement>) {
         {...props}
         type={visible ? "text" : "password"}
         className={styles["password-input"]}
-        style={{ display: "none" }} // 隐藏输入框
+       
         
       />
     </div>
